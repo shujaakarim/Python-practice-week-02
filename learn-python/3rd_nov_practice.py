@@ -76,9 +76,26 @@ prices.append(400)
 print(id(prices))
 """
 
-
+"""
 todays_orders = [4500, 12800]
 report_orders = todays_orders.copy()
 report_orders.append(2300)
 print(todays_orders)
 print(report_orders)
+"""
+
+"""
+# practicing with strings print ORDOO42
+code = "ord-0042"
+code = code.upper()
+code = code.replace("-", "")
+#code = code[0] = "O" #Strings are immutable they can't be change through this process.
+print(code)
+"""
+
+# Cleaning names
+messy_names = [" amna ", "BILAL", " zara khan"]
+
+for i in messy_names:
+    cleaned_names = messy_names.strip.title(messy_names)
+    print(cleaned_names)
