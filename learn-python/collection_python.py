@@ -30,8 +30,28 @@ this_month = {"Noor Foods", "Karachi Crafts"}
 print(f"{last_month - this_month} stopped ordering")
 """
 
+"""
 names = ["Khan", "Laiba", "Shahzaib", "mustansir"]
 names.sort()
 print(names)
 names.reverse()
 print(names)
+"""
+
+raw_orders = [
+    {"customer": " noor foods ", "status": "Delivered", "paid": 1},
+    {"customer": "BILAL TRADERS", "status": " pending ", "paid": 0},
+    {"customer": "noor foods", "status": "PENDING", "paid": 0},
+]
+
+
+cleaned_data = []
+
+for orders in raw_orders:
+    cleaned_data.append(
+        {
+            "customer": orders["customer"].strip().title(),
+            "status": orders["status"].strip().title(),
+            "paid": bool(orders["paid"]),
+        }
+    )
